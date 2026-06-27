@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a0a0a">
+  <style>
+    /* Critical fallback — ensures dark layout if external CSS is delayed */
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: #0a0a0a; color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    img, svg { max-width: 100%; height: auto; display: block; }
+    .logo__icon, .hero__badge-icon { width: 44px; height: 44px; max-width: 44px; max-height: 44px; }
+    .hero__badge-icon { width: 100px; height: 100px; max-width: 100px; max-height: 100px; margin: 0 auto 20px; }
+    .header { background: #111111; }
+    .topbar { background: #1d6fa8; color: #fff; }
+  </style>
   <link rel="canonical" href="https://groveandsonsplumbing.com/">
   <title>Grove &amp; Sons Plumbing | Expert Plumbing Services</title>
   <meta name="description" content="Grove &amp; Sons Plumbing — expert plumbing services for homes and businesses. 24/7 emergency service, licensed and insured. Serving the greater Springfield area.">
@@ -125,7 +135,7 @@
           <p class="hero__sub">Find your local plumber and request service. Grove &amp; Sons delivers expert plumbing with integrity, every time.</p>
 
           <div class="service-finder">
-            <h3>Find your local plumber and request service.</h3>
+            <h3>Enter your zip code to check availability</h3>
             <form class="service-finder__form" id="zip-form">
               <input type="text" class="service-finder__input" placeholder="Zip Code" maxlength="5" pattern="\d{5}" inputmode="numeric" aria-label="Zip code">
               <button type="submit" class="btn btn--primary">Go</button>
@@ -141,9 +151,9 @@
 
         <div class="hero__visual">
           <div class="hero__badge">
-            <img src="/assets/logo.svg" alt="" class="hero__badge-icon">
+            <img src="/assets/logo.svg" alt="" class="hero__badge-icon" width="100" height="100">
             <h3>Licensed &amp; Insured</h3>
-            <p>Family-owned plumbing professionals serving Springfield and surrounding communities since 1999.</p>
+            <p>Family-owned plumbing professionals serving Springfield and surrounding communities.</p>
           </div>
         </div>
       </div>

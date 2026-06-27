@@ -394,6 +394,8 @@ h3 { font-size: 1.35rem; }
 .hero__badge-icon {
   width: 100px;
   height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   margin: 0 auto 20px;
 }
 

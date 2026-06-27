@@ -35,9 +35,9 @@ python3 -m http.server 8000
 
 ## Structure
 
-- `index.html` — main page
-- `css/styles.css` — dark theme styles
-- `js/main.js` — mobile nav, zip finder
-- `assets/logo.svg` — circle wrench logo
+- `index.html` — main page (repo root)
+- `public/css/styles.css` — dark theme styles
+- `public/js/main.js` — mobile nav, zip finder
+- `public/assets/logo.svg` — circle wrench logo
 - `vercel.json` — headers, caching, clean URLs
 - `robots.txt` / `sitemap.xml` — SEO
