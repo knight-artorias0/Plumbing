@@ -379,7 +379,7 @@ h3 { font-size: 1.25rem; }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: var(--forest-green) url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80") center/cover no-repeat;
+  background: var(--forest-green) url("/assets/hero.jpg") center/cover no-repeat;
 }
 
 .hero__overlay {
