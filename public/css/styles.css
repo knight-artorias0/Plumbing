@@ -178,7 +178,7 @@ h3 { font-size: 1.35rem; }
 }
 .logo:hover { color: var(--text-primary); }
 
-.logo__icon { width: 44px; height: 44px; }
+.logo__icon { width: 44px; height: 44px; max-width: 44px; max-height: 44px; }
 
 .logo__name {
   font-family: var(--font-serif);
