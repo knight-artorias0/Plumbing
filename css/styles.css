@@ -379,29 +379,33 @@ h3 { font-size: 1.25rem; }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: var(--forest-green) url("/assets/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(145deg, var(--forest-green) 0%, #243d24 55%, #1a2e1a 100%);
+  overflow: hidden;
 }
 
-.hero__overlay {
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(26, 46, 26, 0.72);
+  background:
+    radial-gradient(circle at 85% 25%, rgba(29, 111, 168, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(91, 191, 238, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 100px 0 72px;
 }
 
 .hero__content {
-  position: relative;
-  z-index: 1;
-  padding: 120px 0 80px;
   color: var(--white);
-  max-width: 680px;
-}
-
-.hero__eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
+  max-width: 620px;
 }
 
 .hero h1 {
@@ -448,6 +452,117 @@ h3 { font-size: 1.25rem; }
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
+}
+
+/* Hero plumbing animation */
+.hero__animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+}
+
+.hero-plumbing {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.hero-water--h {
+  animation: waterFlowH 1.8s linear infinite;
+}
+
+.hero-water--v {
+  animation: waterFlowV 1.8s linear infinite;
+}
+
+.hero-joint {
+  animation: jointPulse 2.4s ease-in-out infinite;
+}
+
+.hero-drop {
+  opacity: 0;
+}
+
+.hero-drop--1 {
+  animation: waterDrip 2.2s ease-in infinite;
+}
+
+.hero-drop--2 {
+  animation: waterDrip 2.2s ease-in 0.7s infinite;
+}
+
+.hero-drop--3 {
+  animation: waterDrip 2.2s ease-in 1.4s infinite;
+}
+
+.hero-wrench {
+  animation: wrenchFloat 4s ease-in-out infinite;
+  transform-origin: 310px 240px;
+}
+
+.hero-ripple {
+  opacity: 0;
+  transform-origin: 250px 310px;
+}
+
+.hero-ripple--1 {
+  animation: rippleExpand 2.2s ease-out infinite;
+}
+
+.hero-ripple--2 {
+  animation: rippleExpand 2.2s ease-out 1.1s infinite;
+}
+
+@keyframes waterFlowH {
+  0% { transform: translateX(-20px); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateX(20px); opacity: 0.5; }
+}
+
+@keyframes waterFlowV {
+  0% { transform: translateY(-12px); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0.5; }
+}
+
+@keyframes waterDrip {
+  0% { opacity: 0; transform: translateY(0) scale(1); }
+  10% { opacity: 0.9; }
+  70% { opacity: 0.6; transform: translateY(220px) scale(0.7); }
+  100% { opacity: 0; transform: translateY(240px) scale(0.4); }
+}
+
+@keyframes jointPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.25); }
+}
+
+@keyframes wrenchFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes rippleExpand {
+  0% { opacity: 0.6; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(2.5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-water--h,
+  .hero-water--v,
+  .hero-drop--1,
+  .hero-drop--2,
+  .hero-drop--3,
+  .hero-wrench,
+  .hero-joint,
+  .hero-ripple--1,
+  .hero-ripple--2 {
+    animation: none;
+  }
+
+  .hero-drop--1 { opacity: 0.7; }
+  .hero-ripple--1 { opacity: 0.25; transform: scale(1.5); }
 }
 
 /* Services */
@@ -938,6 +1053,20 @@ h3 { font-size: 1.25rem; }
     min-height: 85vh;
   }
 
+  .hero__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 120px 0 80px;
+  }
+
+  .hero__animation {
+    order: 1;
+  }
+
+  .hero-plumbing {
+    max-width: 420px;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -983,11 +1112,16 @@ h3 { font-size: 1.25rem; }
   }
 
   .hero {
-    min-height: 70vh;
+    min-height: auto;
   }
 
-  .hero__content {
-    padding: 100px 0 60px;
+  .hero__layout {
+    padding: 88px 0 56px;
+    gap: 32px;
+  }
+
+  .hero-plumbing {
+    max-width: 280px;
   }
 
   .hero__ctas {
