@@ -4,25 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a0a0a">
-  <link rel="canonical" href="https://groveandsonsplumbing.com/">
-  <title>Grove &amp; Sons Plumbing | Expert Plumbing Services</title>
-  <meta name="description" content="Grove &amp; Sons Plumbing — expert plumbing services for homes and businesses. 24/7 emergency service, licensed and insured. Serving the greater Springfield area.">
-  <meta name="keywords" content="plumbing, emergency plumber, drain cleaning, water heater, Grove and Sons">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Grove &amp; Sons Plumbing — Portfolio Concept</title>
+  <meta name="description" content="A fictional plumbing website concept built for portfolio demonstration. Grove &amp; Sons is not a real business.">
+  <meta name="keywords" content="portfolio, web design, plumbing website concept, UI design, fictional demo">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="apple-touch-icon" href="assets/logo.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Grove &amp; Sons Plumbing | Expert Plumbing Services">
-  <meta property="og:description" content="Expert plumbing services for homes and businesses. 24/7 emergency service, licensed and insured.">
-  <meta property="og:url" content="https://groveandsonsplumbing.com">
-  <meta property="og:image" content="https://groveandsonsplumbing.com/assets/logo.svg">
+  <meta property="og:title" content="Grove &amp; Sons Plumbing — Portfolio Concept">
+  <meta property="og:description" content="Fictional plumbing website concept for portfolio demonstration.">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Grove &amp; Sons Plumbing">
-  <meta name="twitter:description" content="Expert plumbing services. 24/7 emergency service.">
+  <meta name="twitter:title" content="Grove &amp; Sons — Portfolio Concept">
+  <meta name="twitter:description" content="Fictional plumbing website concept for portfolio demonstration.">
 
   <style>
     /* Grove & Sons Plumbing — Dark Theme */
@@ -813,46 +811,44 @@
     @supports not (gap: 1rem) {
       .header__inner > * + * { margin-left: 24px; }
     }
+
+    .portfolio-banner {
+      background: rgba(201, 168, 76, 0.12);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .service-finder__demo {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .contact-note {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+      font-style: italic;
+    }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Plumber",
-    "name": "Grove & Sons Plumbing",
-    "url": "https://groveandsonsplumbing.com",
-    "telephone": "+1-555-123-4567",
-    "email": "info@groveandsonsplumbing.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main Street",
-      "addressLocality": "Springfield",
-      "addressRegion": "IL",
-      "postalCode": "62701",
-      "addressCountry": "US"
-    },
-    "image": "https://groveandsonsplumbing.com/assets/logo.svg",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "07:00",
-        "closes": "19:00"
-      }
-    ],
-    "areaServed": ["Springfield", "Chatham", "Rochester", "Sherman", "Riverton"],
-    "priceRange": "$$",
-    "description": "Family-owned plumbing company offering emergency repairs, drain cleaning, water heater services, and more."
-  }
-  </script>
+  <!-- Portfolio concept — no structured business data -->
 </head>
 <body>
+
+  <div class="portfolio-banner">Portfolio Demo — Fictional concept site, not a real business</div>
 
   <!-- Top bar -->
   <div class="topbar">
     <div class="container topbar__inner">
-      <span class="topbar__text">Call us for plumbing emergencies!</span>
-      <a href="tel:+15551234567">(555) 123-4567</a>
-      <a href="#contact" class="topbar__cta">Book Now</a>
+      <span class="topbar__text">Concept website showcase</span>
+      <a href="#contact" class="topbar__cta">View Project</a>
     </div>
   </div>
 
@@ -879,8 +875,7 @@
       </nav>
 
       <div class="header__actions">
-        <a href="tel:+15551234567" class="header__phone">(555) 123-4567</a>
-        <a href="#contact" class="btn btn--gold btn--sm header__cta">Book Now</a>
+        <a href="#contact" class="btn btn--gold btn--sm header__cta">View Project</a>
         <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
           <span class="menu-toggle__bar"></span>
           <span class="menu-toggle__bar"></span>
@@ -898,8 +893,7 @@
     <a href="#about" class="mobile-nav__link">About</a>
     <a href="#contact" class="mobile-nav__link">Contact</a>
     <div class="mobile-nav__cta">
-      <a href="tel:+15551234567" class="btn btn--primary">Call (555) 123-4567</a>
-      <a href="#contact" class="btn btn--gold">Book Now</a>
+      <a href="#contact" class="btn btn--gold">View Project</a>
     </div>
   </nav>
 
@@ -913,17 +907,13 @@
           <p class="hero__sub">Find your local plumber and request service. Grove &amp; Sons delivers expert plumbing with integrity, every time.</p>
 
           <div class="service-finder">
-            <h3>Enter your zip code to check availability</h3>
-            <form class="service-finder__form" id="zip-form">
-              <input type="text" class="service-finder__input" placeholder="Zip Code" maxlength="5" pattern="\d{5}" inputmode="numeric" aria-label="Zip code">
-              <button type="submit" class="btn btn--primary">Go</button>
-            </form>
-            <p class="service-finder__msg" role="status"></p>
+            <p class="service-finder__demo">This is a portfolio concept showcasing layout, branding, and UI design. No real services are offered.</p>
+            <a href="#contact" class="btn btn--primary">Explore the Design</a>
           </div>
 
           <div class="hero__rating">
             <span class="hero__stars" aria-hidden="true">★★★★★</span>
-            <span class="hero__rating-text"><strong>4.9</strong> (2,400+ reviews)</span>
+            <span class="hero__rating-text">5-star rated concept design</span>
           </div>
         </div>
 
@@ -931,7 +921,7 @@
           <div class="hero__badge">
             <img src="assets/logo.svg" alt="" class="hero__badge-icon" width="100" height="100">
             <h3>Licensed &amp; Insured</h3>
-            <p>Family-owned plumbing professionals serving Springfield and surrounding communities.</p>
+            <p>Family-owned plumbing professionals — fictional brand for this portfolio piece.</p>
           </div>
         </div>
       </div>
@@ -1049,9 +1039,7 @@
             <p>When you need plumbing repairs now, we'll be there. Our 24/7 home plumbers are available to address your emergency plumbing service needs day or night.</p>
             <p>Whether you have an emergency burst pipe, a water leak, or an overflowing toilet, we're here to help. And we don't just fix the problem — we take preventive measures to stop it from happening again.</p>
             <div class="emergency__ctas">
-              <a href="#contact" class="btn btn--gold">Book Now</a>
-              <span style="color:var(--text-muted);">or call</span>
-              <a href="tel:+15551234567" class="emergency__phone">(555) 123-4567</a>
+              <a href="#contact" class="btn btn--gold">View Project</a>
             </div>
           </div>
           <div class="emergency__visual">
@@ -1067,51 +1055,50 @@
       <div class="container">
         <div class="reviews-header">
           <div>
-            <p class="eyebrow">See why homeowners love to work with us</p>
-            <h2>Customer Reviews</h2>
+            <p class="eyebrow">Sample content section</p>
+            <h2>Testimonial Layout</h2>
           </div>
           <div class="reviews-score">
-            <span class="reviews-score__number">4.9</span>
+            <span class="reviews-score__number">★★★★★</span>
             <div>
-              <div class="hero__stars">★★★★★</div>
-              <span style="color:var(--text-muted);font-size:0.9rem;">2,400+ reviews</span>
+              <span style="color:var(--text-muted);font-size:0.9rem;">Placeholder reviews</span>
             </div>
           </div>
         </div>
         <div class="reviews-grid">
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"Amazing company. They got us squared away quickly and saved us more of a headache. Professional and courteous — would recommend."</p>
-            <cite class="review-card__author">— Denetria L., Springfield</cite>
+            <p class="review-card__text">"Sample testimonial demonstrating how customer feedback could be presented on a service business website."</p>
+            <cite class="review-card__author">— Client A, Sample City</cite>
           </blockquote>
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"The plumbers were very courteous. They were timely and respectful. They took care of my issue quickly."</p>
-            <cite class="review-card__author">— Ashley R., Chatham</cite>
+            <p class="review-card__text">"Another placeholder review card showing layout, typography, and star rating styling."</p>
+            <cite class="review-card__author">— Client B, Sample City</cite>
           </blockquote>
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"Submitted a request for my water heater this morning. They got back to me right away and did great work. Would recommend."</p>
-            <cite class="review-card__author">— Connor L., Rochester</cite>
+            <p class="review-card__text">"Third sample card for grid balance on desktop and responsive layout on mobile."</p>
+            <cite class="review-card__author">— Client C, Sample City</cite>
           </blockquote>
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"Great customer service. Very good people — highly recommend this company for any plumbing issues."</p>
-            <cite class="review-card__author">— Orlando R., Sherman</cite>
+            <p class="review-card__text">"Fourth placeholder testimonial for trust-building section design in a dark theme."</p>
+            <cite class="review-card__author">— Client D, Sample City</cite>
           </blockquote>
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"The plumber was very nice and helpful. They arrived early which was awesome! Great job explaining pricing."</p>
-            <cite class="review-card__author">— Becca P., Riverton</cite>
+            <p class="review-card__text">"Fifth sample review demonstrating consistent card hierarchy and hover interactions."</p>
+            <cite class="review-card__author">— Client E, Sample City</cite>
           </blockquote>
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">"Trustworthy and punctual. Will only use Grove &amp; Sons. They show up on time and get the job done!"</p>
-            <cite class="review-card__author">— Marcelle G., Jerome</cite>
+            <p class="review-card__text">"Sixth placeholder card completing the testimonial section for this portfolio demo."</p>
+            <cite class="review-card__author">— Client F, Sample City</cite>
           </blockquote>
         </div>
         <div class="reviews-more">
-          <a href="#contact" class="btn btn--outline">Read More Reviews</a>
+          <a href="#contact" class="btn btn--outline">View More Samples</a>
         </div>
       </div>
     </section>
@@ -1126,9 +1113,7 @@
             <p>With Grove &amp; Sons, you get experienced plumbers who live and work in the communities we serve. We're family-owned and operated — more committed to providing excellent experiences and helping out our neighbors.</p>
             <p>We hire talent right from the community, boosting the local economy by keeping dollars in our own backyard. That's worth being proud of.</p>
             <div class="emergency__ctas">
-              <a href="#contact" class="btn btn--primary">Book Now</a>
-              <span style="color:var(--text-muted);">or call</span>
-              <a href="tel:+15551234567" class="emergency__phone">(555) 123-4567</a>
+              <a href="#contact" class="btn btn--primary">View Project</a>
             </div>
           </div>
           <div class="local-stats">
@@ -1197,12 +1182,12 @@
     <!-- Contact CTA -->
     <section id="contact" class="cta-band">
       <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Schedule your plumbing service today — we're here when you need us.</p>
+        <h2>Portfolio Concept</h2>
+        <p>This is a fictional plumbing website built to showcase UI design, layout, and branding. No real services are offered.</p>
         <div class="cta-band__actions">
-          <a href="#contact" class="btn btn--gold">Book Now</a>
-          <a href="tel:+15551234567" class="cta-band__phone">(555) 123-4567</a>
+          <a href="#home" class="btn btn--gold">Back to Top</a>
         </div>
+        <p class="contact-note">Interested in working together? Reach out through my portfolio — contact details are not listed on this demo site.</p>
       </div>
     </section>
   </main>
@@ -1238,16 +1223,16 @@
           </nav>
         </div>
         <div>
-          <h3 class="footer__heading">Contact</h3>
+          <h3 class="footer__heading">About This Project</h3>
           <nav class="footer__links">
-            <a href="tel:+15551234567">(555) 123-4567</a>
-            <a href="mailto:info@groveandsonsplumbing.com">info@groveandsonsplumbing.com</a>
-            <span>123 Main Street, Springfield, IL</span>
+            <span>Fictional brand concept</span>
+            <span>Portfolio demonstration only</span>
+            <span>Not a real business</span>
           </nav>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2026 Grove &amp; Sons Plumbing. All rights reserved. Licensed &amp; Insured.</span>
+        <span>&copy; 2026 Grove &amp; Sons Plumbing — Portfolio Concept. Fictional demo site.</span>
         <nav class="footer__legal" aria-label="Legal links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
@@ -1259,17 +1244,14 @@
 
   <!-- Mobile floating CTA -->
   <div class="floating-cta">
-    <a href="tel:+15551234567" class="btn btn--outline btn--sm">Call Us</a>
-    <a href="#contact" class="btn btn--gold btn--sm">Book Now</a>
+    <a href="#home" class="btn btn--gold btn--sm">View Project</a>
   </div>
 
-  <script <script>
+  <script>
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
-  const zipForm = document.getElementById('zip-form');
-  const zipMsg = document.querySelector('.service-finder__msg');
 
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener('click', function () {
@@ -1287,30 +1269,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-
-  if (zipForm) {
-    zipForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const input = zipForm.querySelector('input');
-      const zip = input.value.trim();
-
-      if (!/^\d{5}$/.test(zip)) {
-        if (zipMsg) {
-          zipMsg.textContent = 'Please enter a valid 5-digit zip code.';
-          zipMsg.style.color = '#e74c3c';
-          zipMsg.classList.add('visible');
-        }
-        return;
-      }
-
-      if (zipMsg) {
-        zipMsg.textContent = 'Great news — Grove & Sons services your area! Call us to schedule.';
-        zipMsg.style.color = '';
-        zipMsg.classList.add('visible');
-      }
-    });
-  }
-
 });
   </script>
 </body>
