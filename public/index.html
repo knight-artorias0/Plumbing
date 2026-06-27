@@ -69,6 +69,10 @@
 </head>
 <body>
 
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <img src="/assets/logo.svg" alt="" class="page-loader__logo" width="64" height="64">
+  </div>
+
   <!-- Top bar -->
   <div class="topbar">
     <div class="container topbar__inner">
@@ -129,7 +133,7 @@
     <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero__inner">
-        <div class="hero__content reveal reveal--left">
+        <div class="hero__content hero-load">
           <p class="eyebrow">You can count on the</p>
           <h1 class="hero__headline">Reliable <span>Plumbers!</span></h1>
           <p class="hero__sub">Find your local plumber and request service. Grove &amp; Sons delivers expert plumbing with integrity, every time.</p>
@@ -149,7 +153,7 @@
           </div>
         </div>
 
-        <div class="hero__visual reveal reveal--right">
+        <div class="hero__visual hero-load-visual">
           <div class="hero-animation" aria-hidden="true">
             <svg class="hero-plumbing" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -391,18 +395,18 @@
               <a href="tel:+15551234567" class="emergency__phone">(555) 123-4567</a>
             </div>
           </div>
-          <div class="local-stats reveal-stagger">
-            <div class="local-stat">
-              <div class="local-stat__number" data-count="25" data-suffix="+">0</div>
-              <div class="local-stat__label">Years Experience</div>
+          <div class="stats-row reveal" id="stats-row">
+            <div class="stat-card">
+              <span class="stat-card__number" data-count="25" data-suffix="+">25+</span>
+              <span class="stat-card__label">Years Experience</span>
             </div>
-            <div class="local-stat">
-              <div class="local-stat__number" data-text="24/7">24/7</div>
-              <div class="local-stat__label">Emergency Service</div>
+            <div class="stat-card stat-card--highlight">
+              <span class="stat-card__number">24/7</span>
+              <span class="stat-card__label">Emergency Service</span>
             </div>
-            <div class="local-stat">
-              <div class="local-stat__number" data-count="100" data-suffix="%">0</div>
-              <div class="local-stat__label">Satisfaction</div>
+            <div class="stat-card">
+              <span class="stat-card__number" data-count="100" data-suffix="%">100%</span>
+              <span class="stat-card__label">Satisfaction</span>
             </div>
           </div>
         </div>

@@ -9,9 +9,27 @@
   const sections = document.querySelectorAll('section[id]');
   const zipForm = document.getElementById('zip-form');
   const zipMsg = document.querySelector('.service-finder__msg');
+  const pageLoader = document.getElementById('page-loader');
+  const statsRow = document.getElementById('stats-row');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Header scroll effect
+  // Premium page load sequence
+  function initPageLoad() {
+    if (prefersReducedMotion) {
+      document.body.classList.add('page-loaded');
+      if (pageLoader) pageLoader.classList.add('done');
+      return;
+    }
+
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        document.body.classList.add('page-loaded');
+        if (pageLoader) pageLoader.classList.add('done');
+      }, 600);
+    });
+  }
+
+  // Header scroll
   function handleScroll() {
     if (header) {
       header.classList.toggle('scrolled', window.scrollY > 20);
@@ -40,14 +58,12 @@
     });
   }
 
-  // Active nav on scroll
   function updateActiveNav() {
     let current = '';
     const offset = 120;
 
     sections.forEach(function (section) {
-      const top = section.offsetTop - offset;
-      if (window.scrollY >= top) {
+      if (window.scrollY >= section.offsetTop - offset) {
         current = section.getAttribute('id');
       }
     });
@@ -63,29 +79,35 @@
 
     if (prefersReducedMotion) {
       revealEls.forEach(function (el) { el.classList.add('visible'); });
+      animateStats();
       return;
     }
 
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('visible');
+
+        if (entry.target.id === 'stats-row') {
+          animateStats();
         }
+
+        observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
 
     revealEls.forEach(function (el) { observer.observe(el); });
-
-    // Hero content visible immediately
-    document.querySelectorAll('.hero .reveal').forEach(function (el) {
-      setTimeout(function () { el.classList.add('visible'); }, 100);
-    });
   }
 
-  // Animated counters
-  function initCounters() {
-    const counters = document.querySelectorAll('[data-count]');
+  // Animated stat counters
+  let statsAnimated = false;
+
+  function animateStats() {
+    if (statsAnimated) return;
+    statsAnimated = true;
+
+    const counters = document.querySelectorAll('.stat-card__number[data-count]');
 
     if (prefersReducedMotion) {
       counters.forEach(function (el) {
@@ -94,29 +116,33 @@
       return;
     }
 
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
+    counters.forEach(function (el, i) {
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const delay = i * 150;
+      const start = performance.now() + delay;
 
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1500;
-        const start = performance.now();
+      el.classList.add('counting');
+      el.textContent = '0' + suffix;
 
-        function tick(now) {
-          const progress = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.round(target * eased) + suffix;
-          if (progress < 1) requestAnimationFrame(tick);
+      function tick(now) {
+        if (now < start) {
+          requestAnimationFrame(tick);
+          return;
         }
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 4);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.classList.remove('counting');
+        }
+      }
 
-        requestAnimationFrame(tick);
-        observer.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(function (el) { observer.observe(el); });
+      requestAnimationFrame(tick);
+    });
   }
 
   // Zip form
@@ -148,7 +174,7 @@
     });
   }
 
-  // Service tile tilt on mouse (desktop only)
+  // Service tile tilt
   function initTilt() {
     if (prefersReducedMotion || window.innerWidth < 768) return;
 
@@ -166,7 +192,7 @@
     });
   }
 
+  initPageLoad();
   initReveal();
-  initCounters();
   initTilt();
 })();
