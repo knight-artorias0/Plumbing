@@ -1,0 +1,10 @@
+{
+  "name": "grove-sons-plumbing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Grove & Sons Plumbing — dark-themed plumbing website",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  }
+}
