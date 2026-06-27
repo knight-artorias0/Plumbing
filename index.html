@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a2e1a">
+  <link rel="canonical" href="https://groveandsonsplumbing.com/">
   <title>Grove &amp; Sons Plumbing | Trusted Family Plumbing Services</title>
   <meta name="description" content="Grove &amp; Sons Plumbing — reliable plumbing for homes and businesses. 24/7 emergency service, licensed &amp; insured. Free estimates. Serving the greater metro area.">
   <meta name="keywords" content="plumbing, emergency plumber, drain cleaning, water heater, Grove and Sons">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Grove &amp; Sons Plumbing | Trusted Family Plumbing Services">
   <meta property="og:description" content="Reliable plumbing for homes and businesses. 24/7 emergency service, licensed &amp; insured. Free estimates.">
   <meta property="og:url" content="https://groveandsonsplumbing.com">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80">
+  <meta property="og:image" content="https://groveandsonsplumbing.com/assets/logo.svg">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
@@ -21,7 +24,8 @@
   <meta name="twitter:title" content="Grove &amp; Sons Plumbing">
   <meta name="twitter:description" content="Reliable plumbing for homes and businesses. 24/7 emergency service.">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="/css/styles.css" as="style">
+  <link rel="stylesheet" href="/css/styles.css">
 
   <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -79,7 +83,7 @@
   <header class="header" role="banner">
     <div class="container header__inner">
       <a href="#home" class="logo" aria-label="Grove and Sons Plumbing — Home">
-        <img src="assets/logo.svg" alt="" class="logo__icon" width="40" height="46">
+        <img src="/assets/logo.svg" alt="" class="logo__icon" width="40" height="40">
         <div class="logo__text">
           <span class="logo__name">Grove &amp; Sons</span>
           <span class="logo__tag">Plumbing</span>
@@ -128,28 +132,78 @@
   <main>
     <!-- Hero -->
     <section id="home" class="hero" aria-labelledby="hero-heading">
-      <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Since 1999</p>
-        <h1 id="hero-heading">Trusted Family Plumbing</h1>
-        <p class="hero__subhead">Grove &amp; Sons — reliable plumbing for homes and businesses in the greater Springfield area. 24/7 emergency service available.</p>
-        <div class="hero__ctas">
-          <a href="tel:+15551234567" class="btn btn--gold">Call Now</a>
-          <a href="#contact" class="btn btn--outline">Request a Quote</a>
+      <div class="container hero__layout">
+        <div class="hero__content">
+          <h1 id="hero-heading">Trusted Family Plumbing</h1>
+          <p class="hero__subhead">Grove &amp; Sons — reliable plumbing for homes and businesses in the greater Springfield area. 24/7 emergency service available.</p>
+          <div class="hero__ctas">
+            <a href="tel:+15551234567" class="btn btn--gold">Call Now</a>
+            <a href="#contact" class="btn btn--outline">Request a Quote</a>
+          </div>
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <span class="hero__trust-icon" aria-hidden="true">✓</span>
+              Licensed &amp; Insured
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-icon" aria-hidden="true">✓</span>
+              Same-Day Service
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-icon" aria-hidden="true">✓</span>
+              Free Estimates
+            </div>
+          </div>
         </div>
-        <div class="hero__trust">
-          <div class="hero__trust-item">
-            <span class="hero__trust-icon" aria-hidden="true">✓</span>
-            Licensed &amp; Insured
-          </div>
-          <div class="hero__trust-item">
-            <span class="hero__trust-icon" aria-hidden="true">✓</span>
-            Same-Day Service
-          </div>
-          <div class="hero__trust-item">
-            <span class="hero__trust-icon" aria-hidden="true">✓</span>
-            Free Estimates
-          </div>
+
+        <div class="hero__animation" aria-hidden="true">
+          <svg class="hero-plumbing" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pipeMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d4b55e"/>
+                <stop offset="100%" stop-color="#a88a3a"/>
+              </linearGradient>
+              <linearGradient id="waterFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#5bbfee" stop-opacity="0.3"/>
+                <stop offset="50%" stop-color="#5bbfee"/>
+                <stop offset="100%" stop-color="#5bbfee" stop-opacity="0.3"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Pipe network -->
+            <rect class="hero-pipe" x="60" y="140" width="200" height="18" rx="9" fill="url(#pipeMetal)"/>
+            <rect class="hero-pipe" x="242" y="60" width="18" height="98" rx="9" fill="url(#pipeMetal)"/>
+            <rect class="hero-pipe" x="60" y="60" width="120" height="18" rx="9" fill="url(#pipeMetal)"/>
+            <rect class="hero-pipe" x="60" y="60" width="18" height="98" rx="9" fill="url(#pipeMetal)"/>
+            <circle class="hero-joint" cx="251" cy="149" r="14" fill="#c9a84c"/>
+            <circle class="hero-joint" cx="69" cy="149" r="14" fill="#c9a84c"/>
+
+            <!-- Flowing water -->
+            <rect class="hero-water hero-water--h" x="74" y="146" width="160" height="6" rx="3" fill="url(#waterFlow)"/>
+            <rect class="hero-water hero-water--v" x="248" y="74" width="6" height="66" rx="3" fill="url(#waterFlow)"/>
+
+            <!-- Faucet -->
+            <g class="hero-faucet">
+              <rect x="230" y="28" width="42" height="14" rx="7" fill="url(#pipeMetal)"/>
+              <rect x="246" y="42" width="10" height="22" rx="3" fill="url(#pipeMetal)"/>
+              <path d="M236 64 Q250 72 264 64" stroke="#c9a84c" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- Dripping water -->
+            <circle class="hero-drop hero-drop--1" cx="250" cy="82" r="5" fill="#5bbfee"/>
+            <circle class="hero-drop hero-drop--2" cx="250" cy="82" r="4" fill="#5bbfee"/>
+            <circle class="hero-drop hero-drop--3" cx="250" cy="82" r="3" fill="#5bbfee"/>
+
+            <!-- Wrench (brand echo) -->
+            <g class="hero-wrench">
+              <circle cx="310" cy="240" r="52" stroke="#1d6fa8" stroke-width="3" fill="none" opacity="0.35"/>
+              <path d="M322 218c-4.2 0-7.6 3.4-7.6 7.6 0 1.4.4 2.7 1 3.8l-14.8 17.2 2 7.2 7.2-1.8 15.8-15.8c1 .5 2.1.8 3.2.8 4.2 0 7.6-3.4 7.6-7.6 0-1.1-.2-2.1-.6-3.1l-5.8 4.2-6.8-.6-.6-6.8 4.8-4.8c-1.2-.6-2.5-.9-3.8-.9z" stroke="#1d6fa8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+
+            <!-- Ripple rings -->
+            <circle class="hero-ripple hero-ripple--1" cx="250" cy="310" r="20" stroke="#5bbfee" stroke-width="2" fill="none"/>
+            <circle class="hero-ripple hero-ripple--2" cx="250" cy="310" r="20" stroke="#5bbfee" stroke-width="2" fill="none"/>
+          </svg>
         </div>
       </div>
     </section>
@@ -219,7 +273,7 @@
       <div class="container">
         <div class="why-us">
           <div class="why-us__image">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Grove and Sons plumbing team at work" width="800" height="600" loading="lazy">
+            <img src="/assets/team.jpg" alt="Grove and Sons plumbing team at work" width="800" height="600" loading="lazy" decoding="async">
           </div>
           <div class="why-us__content">
             <h2 id="why-heading">Why Grove &amp; Sons?</h2>
@@ -451,7 +505,7 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#home" class="logo">
-            <img src="assets/logo.svg" alt="" class="logo__icon" width="40" height="46">
+            <img src="/assets/logo.svg" alt="" class="logo__icon" width="40" height="40">
             <div class="logo__text">
               <span class="logo__name">Grove &amp; Sons</span>
               <span class="logo__tag">Plumbing</span>
@@ -493,6 +547,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
