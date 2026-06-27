@@ -1,8 +1,6 @@
-# Grove & Sons Plumbing — Portfolio Concept
+# Grove & Sons Plumbing
 
-A fictional plumbing website built as a **portfolio demonstration**. Grove & Sons is not a real business — no contact details, services, or reviews represent actual offerings.
-
-Dark-themed, single-page site optimized for [Vercel](https://vercel.com) hosting.
+Dark-themed plumbing website, optimized for [Vercel](https://vercel.com) hosting.
 
 ## Deploy to Vercel
 
@@ -24,11 +22,11 @@ Then visit http://localhost:8000
 
 ```
 public/
-  index.html          — main page (CSS & JS inlined for browser compatibility)
-  css/styles.css      — source styles
-  js/main.js          — mobile nav
+  index.html          — main page
+  css/styles.css      — dark theme styles
+  js/main.js          — mobile nav, zip finder
   assets/logo.svg     — circle wrench logo
-  robots.txt          — disallows indexing (portfolio demo)
+  robots.txt
   sitemap.xml
 vercel.json           — Vercel config (outputDirectory: public)
 ```
