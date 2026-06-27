@@ -1,12 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Hello World</title>
-            </head>
-            <body>
-                <h1>Hello World!</h1>
-                </body>
-                </html>
-                
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grove &amp; Sons Plumbing | Trusted Family Plumbing Services</title>
+  <meta name="description" content="Grove &amp; Sons Plumbing — reliable plumbing for homes and businesses. 24/7 emergency service, licensed &amp; insured. Free estimates. Serving the greater metro area.">
+  <meta name="keywords" content="plumbing, emergency plumber, drain cleaning, water heater, Grove and Sons">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Grove &amp; Sons Plumbing | Trusted Family Plumbing Services">
+  <meta property="og:description" content="Reliable plumbing for homes and businesses. 24/7 emergency service, licensed &amp; insured. Free estimates.">
+  <meta property="og:url" content="https://groveandsonsplumbing.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grove &amp; Sons Plumbing">
+  <meta name="twitter:description" content="Reliable plumbing for homes and businesses. 24/7 emergency service.">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Grove & Sons Plumbing",
+    "image": "https://groveandsonsplumbing.com/assets/logo.svg",
+    "url": "https://groveandsonsplumbing.com",
+    "telephone": "+1-555-123-4567",
+    "email": "info@groveandsonsplumbing.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62701",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.7817,
+      "longitude": -89.6501
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "$$",
+    "areaServed": [
+      "Springfield",
+      "Chatham",
+      "Rochester",
+      "Sherman",
+      "Riverton",
+      "Jerome",
+      "Williamsville",
+      "Pawnee",
+      "Divernon",
+      "Buffalo"
+    ],
+    "description": "Family-owned plumbing company offering emergency repairs, drain cleaning, water heater services, and more. Licensed, bonded, and insured.",
+    "foundingDate": "1999",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Grove and Sons Plumbing — Home">
+        <img src="assets/logo.svg" alt="" class="logo__icon" width="40" height="46">
+        <div class="logo__text">
+          <span class="logo__name">Grove &amp; Sons</span>
+          <span class="logo__tag">Plumbing</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Home</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#why-us" class="nav__link">Why Us</a></li>
+          <li><a href="#reviews" class="nav__link">Reviews</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+15551234567" class="header__phone">(555) 123-4567</a>
+        <a href="#contact" class="btn btn--primary btn--sm header__cta-desktop">Get a Free Quote</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="#home" class="mobile-nav__link">Home</a></li>
+      <li><a href="#services" class="mobile-nav__link">Services</a></li>
+      <li><a href="#why-us" class="mobile-nav__link">Why Us</a></li>
+      <li><a href="#reviews" class="mobile-nav__link">Reviews</a></li>
+      <li><a href="#faq" class="mobile-nav__link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a href="tel:+15551234567" class="btn btn--primary">Call (555) 123-4567</a>
+      <a href="#contact" class="btn btn--gold">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Since 1999</p>
+        <h1 id="hero-heading">Trusted Family Plumbing</h1>
+        <p class="hero__subhead">Grove &amp; Sons — reliable plumbing for homes and businesses in the greater Springfield area. 24/7 emergency service available.</p>
+        <div class="hero__ctas">
+          <a href="tel:+15551234567" class="btn btn--gold">Call Now</a>
+          <a href="#contact" class="btn btn--outline">Request a Quote</a>
+        </div>
+        <div class="hero__trust">
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon" aria-hidden="true">✓</span>
+            Licensed &amp; Insured
+          </div>
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon" aria-hidden="true">✓</span>
+            Same-Day Service
+          </div>
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon" aria-hidden="true">✓</span>
+            Free Estimates
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section section--alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="services-heading">Our Plumbing Services</h2>
+          <p>Professional solutions for every plumbing need, from quick fixes to full remodels.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Emergency Repairs</h3>
+            <p>Burst pipes, major leaks, and urgent plumbing failures — we're available 24/7 to protect your home.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </div>
+            <h3>Drain &amp; Sewer Cleaning</h3>
+            <p>Clear stubborn clogs and restore proper flow with professional drain and sewer line services.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9V3m0 0L8 7m4-4l4 4"/><rect x="4" y="9" width="16" height="10" rx="2"/><path d="M8 19v2m8-2v2"/></svg>
+            </div>
+            <h3>Water Heaters</h3>
+            <p>Installation, repair, and maintenance for tank and tankless water heaters of all brands.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Fixture Installation</h3>
+            <p>Faucets, toilets, sinks, and garbage disposals installed right the first time.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Bathroom &amp; Kitchen Remodel</h3>
+            <p>Complete plumbing for renovations — from rough-in to final fixture installation.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </div>
+            <h3>Commercial Plumbing</h3>
+            <p>Reliable plumbing services for offices, restaurants, retail spaces, and multi-unit buildings.</p>
+            <a href="#contact" class="service-card__link">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-us">
+          <div class="why-us__image">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Grove and Sons plumbing team at work" width="800" height="600" loading="lazy">
+          </div>
+          <div class="why-us__content">
+            <h2 id="why-heading">Why Grove &amp; Sons?</h2>
+            <ul class="why-us__list">
+              <li>Family-owned and operated for over 25 years</li>
+              <li>Licensed, bonded, and fully insured</li>
+              <li>Upfront, honest pricing — no hidden fees</li>
+              <li>Clean, respectful technicians who treat your home like their own</li>
+              <li>100% satisfaction guaranteed on every job</li>
+            </ul>
+            <div class="why-us__stat">
+              <span class="why-us__stat-number">25+</span>
+              <span class="why-us__stat-label">Years of Experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section id="service-area" class="section section--dark" aria-labelledby="area-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="area-heading">Proudly Serving Springfield &amp; Surrounding Areas</h2>
+          <p>Local plumbers who know your neighborhood.</p>
+        </div>
+        <div class="area-tags">
+          <span class="area-tag">Springfield</span>
+          <span class="area-tag">Chatham</span>
+          <span class="area-tag">Rochester</span>
+          <span class="area-tag">Sherman</span>
+          <span class="area-tag">Riverton</span>
+          <span class="area-tag">Jerome</span>
+          <span class="area-tag">Williamsville</span>
+          <span class="area-tag">Pawnee</span>
+          <span class="area-tag">Divernon</span>
+          <span class="area-tag">Buffalo</span>
+        </div>
+        <p class="area-note">Not sure if we cover your area? <a href="tel:+15551234567" style="color: var(--gold);">Give us a call</a> — we're happy to help.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="section section--alt" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="reviews-heading">What Our Customers Say</h2>
+          <p>Trusted by homeowners and businesses across the region.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">"Fast, professional, and fair pricing. They fixed our kitchen sink leak in under an hour. Highly recommend Grove &amp; Sons!"</p>
+            <cite class="testimonial-card__author">— Sarah M., Springfield</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">"Grove &amp; Sons saved us on a Sunday night when our water heater failed. True 24/7 service — they were here within the hour."</p>
+            <cite class="testimonial-card__author">— James T., Chatham</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">"Honest quote upfront, no surprises on the bill. The team was courteous and left everything spotless. Our go-to plumber now."</p>
+            <cite class="testimonial-card__author">— Linda K., Rochester</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <p>Answers to common questions about our plumbing services.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question" aria-expanded="true">
+              Do you offer emergency plumbing services?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes — we provide 24/7 emergency plumbing service for burst pipes, major leaks, sewer backups, and other urgent issues. Call us anytime and a technician will be dispatched as quickly as possible.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What areas do you serve?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>We serve Springfield and surrounding communities including Chatham, Rochester, Sherman, Riverton, Jerome, Williamsville, Pawnee, Divernon, and Buffalo. Not sure if we cover your area? Give us a call.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How much does a service call cost?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our service call fee is applied toward the cost of repair if you choose to proceed. We always provide an upfront quote before starting any work — no hidden fees or surprise charges.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Are you licensed and insured?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Grove &amp; Sons Plumbing is fully licensed, bonded, and insured. All our technicians are trained professionals who meet state and local requirements.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you offer free estimates?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we offer free estimates for most plumbing projects including remodels, water heater replacements, and fixture installations. Contact us to schedule yours.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What payment methods do you accept?
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>We accept cash, checks, and all major credit cards. Payment is due upon completion of work unless other arrangements have been made in advance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--dark" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="contact-heading">Get a Free Quote Today</h2>
+          <p>Reach out by phone or fill out the form below — we'll get back to you promptly.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Phone</p>
+                <p class="contact-info__value"><a href="tel:+15551234567">(555) 123-4567</a></p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Email</p>
+                <p class="contact-info__value"><a href="mailto:info@groveandsonsplumbing.com">info@groveandsonsplumbing.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Address</p>
+                <p class="contact-info__value">123 Main Street, Springfield, IL 62701</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="contact-info__label">Hours</p>
+                <p class="contact-info__value">Mon–Sat 7am–7pm<br>24/7 Emergency Service</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 123-4567">
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service...</option>
+                <option value="emergency">Emergency Repair</option>
+                <option value="drain">Drain &amp; Sewer Cleaning</option>
+                <option value="water-heater">Water Heater</option>
+                <option value="fixture">Fixture Installation</option>
+                <option value="remodel">Bathroom/Kitchen Remodel</option>
+                <option value="commercial">Commercial Plumbing</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your plumbing needs..."></textarea>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--gold">Submit Request</button>
+            <div class="form-success" role="status">Thank you! Your request has been received. We'll be in touch shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#home" class="logo">
+            <img src="assets/logo.svg" alt="" class="logo__icon" width="40" height="46">
+            <div class="logo__text">
+              <span class="logo__name">Grove &amp; Sons</span>
+              <span class="logo__tag">Plumbing</span>
+            </div>
+          </a>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <nav class="footer__links" aria-label="Footer quick links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer__heading">Services</h3>
+          <nav class="footer__links" aria-label="Footer services">
+            <a href="#services">Emergency Repairs</a>
+            <a href="#services">Drain &amp; Sewer</a>
+            <a href="#services">Water Heaters</a>
+            <a href="#services">Remodeling</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer__heading">Contact</h3>
+          <nav class="footer__links" aria-label="Footer contact">
+            <a href="tel:+15551234567">(555) 123-4567</a>
+            <a href="mailto:info@groveandsonsplumbing.com">info@groveandsonsplumbing.com</a>
+            <span>123 Main Street</span>
+            <span>Springfield, IL 62701</span>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Grove &amp; Sons Plumbing. All rights reserved.</p>
+        <p>Licensed &amp; Insured &middot; IL License #PLB-12345</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
