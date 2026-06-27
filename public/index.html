@@ -100,7 +100,7 @@
         </ul>
       </nav>
 
-      <div style="display:flex;align-items:center;gap:16px;">
+      <div class="header__actions">
         <a href="tel:+15551234567" class="header__phone">(555) 123-4567</a>
         <a href="#contact" class="btn btn--gold btn--sm header__cta">Book Now</a>
         <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -129,7 +129,7 @@
     <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero__inner">
-        <div class="hero__content">
+        <div class="hero__content reveal reveal--left">
           <p class="eyebrow">You can count on the</p>
           <h1 class="hero__headline">Reliable <span>Plumbers!</span></h1>
           <p class="hero__sub">Find your local plumber and request service. Grove &amp; Sons delivers expert plumbing with integrity, every time.</p>
@@ -149,9 +149,45 @@
           </div>
         </div>
 
-        <div class="hero__visual">
+        <div class="hero__visual reveal reveal--right">
+          <div class="hero-animation" aria-hidden="true">
+            <svg class="hero-plumbing" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pipeMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d4b55e"/>
+                  <stop offset="100%" stop-color="#a88a3a"/>
+                </linearGradient>
+                <linearGradient id="waterFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#5bbfee" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#5bbfee"/>
+                  <stop offset="100%" stop-color="#5bbfee" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              <rect x="60" y="140" width="200" height="18" rx="9" fill="url(#pipeMetal)"/>
+              <rect x="242" y="60" width="18" height="98" rx="9" fill="url(#pipeMetal)"/>
+              <rect x="60" y="60" width="120" height="18" rx="9" fill="url(#pipeMetal)"/>
+              <rect x="60" y="60" width="18" height="98" rx="9" fill="url(#pipeMetal)"/>
+              <circle cx="251" cy="149" r="14" fill="#c9a84c" class="hero-joint"/>
+              <circle cx="69" cy="149" r="14" fill="#c9a84c" class="hero-joint"/>
+              <rect class="hero-water hero-water--h" x="74" y="146" width="160" height="6" rx="3" fill="url(#waterFlow)"/>
+              <rect class="hero-water hero-water--v" x="248" y="74" width="6" height="66" rx="3" fill="url(#waterFlow)"/>
+              <g class="hero-faucet">
+                <rect x="230" y="28" width="42" height="14" rx="7" fill="url(#pipeMetal)"/>
+                <rect x="246" y="42" width="10" height="22" rx="3" fill="url(#pipeMetal)"/>
+              </g>
+              <circle class="hero-drop hero-drop--1" cx="250" cy="82" r="5" fill="#5bbfee"/>
+              <circle class="hero-drop hero-drop--2" cx="250" cy="82" r="4" fill="#5bbfee"/>
+              <circle class="hero-drop hero-drop--3" cx="250" cy="82" r="3" fill="#5bbfee"/>
+              <g class="hero-wrench">
+                <circle cx="310" cy="240" r="52" stroke="#1d6fa8" stroke-width="3" fill="none" opacity="0.35"/>
+                <path d="M322 218c-4.2 0-7.6 3.4-7.6 7.6 0 1.4.4 2.7 1 3.8l-14.8 17.2 2 7.2 7.2-1.8 15.8-15.8c1 .5 2.1.8 3.2.8 4.2 0 7.6-3.4 7.6-7.6 0-1.1-.2-2.1-.6-3.1l-5.8 4.2-6.8-.6-.6-6.8 4.8-4.8c-1.2-.6-2.5-.9-3.8-.9z" stroke="#1d6fa8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <circle class="hero-ripple hero-ripple--1" cx="250" cy="310" r="20" stroke="#5bbfee" stroke-width="2" fill="none"/>
+              <circle class="hero-ripple hero-ripple--2" cx="250" cy="310" r="20" stroke="#5bbfee" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
           <div class="hero__badge">
-            <img src="/assets/logo.svg" alt="" class="hero__badge-icon" width="100" height="100">
+            <img src="/assets/logo.svg" alt="" class="hero__badge-icon" width="80" height="80">
             <h3>Licensed &amp; Insured</h3>
             <p>Family-owned plumbing professionals serving Springfield and surrounding communities.</p>
           </div>
@@ -163,12 +199,12 @@
     <section class="section section--dark">
       <div class="container">
         <div class="pro-section">
-          <div class="pro-section__text">
+          <div class="pro-section__text reveal">
             <p class="eyebrow">Look to the</p>
             <h2>Plumbing Service Professionals</h2>
             <p>With our commitment to integrity and upfront pricing, Grove &amp; Sons customers get what most homeowners only dream about: worry-free plumbing.</p>
           </div>
-          <div class="pro-features">
+          <div class="pro-features reveal-stagger">
             <div class="pro-feature">
               <div class="pro-feature__icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -201,11 +237,11 @@
     <!-- Services -->
     <section id="services" class="section section--black">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2>Plumbing Services</h2>
           <p>Comprehensive plumbing solutions for every need in your home or business.</p>
         </div>
-        <div class="services-grid">
+        <div class="services-grid reveal-stagger">
           <a href="#contact" class="service-tile">
             <svg class="service-tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
             <h3>Drains</h3>
@@ -265,7 +301,7 @@
     <section id="emergency" class="section section--green">
       <div class="container">
         <div class="emergency">
-          <div class="emergency__content">
+          <div class="emergency__content reveal reveal--left">
             <h2>Emergency Response Plumbing Services</h2>
             <h3>Our Licensed Plumbers Are Prepared, Anytime</h3>
             <p>When you need plumbing repairs now, we'll be there. Our 24/7 home plumbers are available to address your emergency plumbing service needs day or night.</p>
@@ -276,8 +312,8 @@
               <a href="tel:+15551234567" class="emergency__phone">(555) 123-4567</a>
             </div>
           </div>
-          <div class="emergency__visual">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <div class="emergency__visual reveal reveal--right">
+            <svg class="emergency-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             <p><strong style="color:var(--text-primary);">24/7 Emergency Service</strong><br>Available day and night for urgent plumbing needs.</p>
           </div>
         </div>
@@ -287,7 +323,7 @@
     <!-- Reviews -->
     <section id="reviews" class="section section--dark">
       <div class="container">
-        <div class="reviews-header">
+        <div class="reviews-header reveal">
           <div>
             <p class="eyebrow">See why homeowners love to work with us</p>
             <h2>Customer Reviews</h2>
@@ -300,7 +336,8 @@
             </div>
           </div>
         </div>
-        <div class="reviews-grid">
+        <div class="reviews-scroll reveal">
+          <div class="reviews-grid">
           <blockquote class="review-card">
             <div class="review-card__stars">★★★★★</div>
             <p class="review-card__text">"Amazing company. They got us squared away quickly and saved us more of a headache. Professional and courteous — would recommend."</p>
@@ -331,8 +368,9 @@
             <p class="review-card__text">"Trustworthy and punctual. Will only use Grove &amp; Sons. They show up on time and get the job done!"</p>
             <cite class="review-card__author">— Marcelle G., Jerome</cite>
           </blockquote>
+          </div>
         </div>
-        <div class="reviews-more">
+        <div class="reviews-more reveal">
           <a href="#contact" class="btn btn--outline">Read More Reviews</a>
         </div>
       </div>
@@ -342,7 +380,7 @@
     <section id="about" class="section section--black">
       <div class="container">
         <div class="local-section">
-          <div class="local-section__content">
+          <div class="local-section__content reveal reveal--left">
             <h2>National Expertise, Local Support</h2>
             <h3>Looking to support local residential plumbing companies?</h3>
             <p>With Grove &amp; Sons, you get experienced plumbers who live and work in the communities we serve. We're family-owned and operated — more committed to providing excellent experiences and helping out our neighbors.</p>
@@ -353,17 +391,17 @@
               <a href="tel:+15551234567" class="emergency__phone">(555) 123-4567</a>
             </div>
           </div>
-          <div class="local-stats">
+          <div class="local-stats reveal-stagger">
             <div class="local-stat">
-              <div class="local-stat__number">25+</div>
+              <div class="local-stat__number" data-count="25" data-suffix="+">0</div>
               <div class="local-stat__label">Years Experience</div>
             </div>
             <div class="local-stat">
-              <div class="local-stat__number">24/7</div>
+              <div class="local-stat__number" data-text="24/7">24/7</div>
               <div class="local-stat__label">Emergency Service</div>
             </div>
             <div class="local-stat">
-              <div class="local-stat__number">100%</div>
+              <div class="local-stat__number" data-count="100" data-suffix="%">0</div>
               <div class="local-stat__label">Satisfaction</div>
             </div>
           </div>
@@ -374,11 +412,11 @@
     <!-- Tips -->
     <section class="section section--dark">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2>Tips from the Experts</h2>
           <p>Practical plumbing advice from the Grove &amp; Sons team.</p>
         </div>
-        <div class="tips-grid">
+        <div class="tips-grid reveal-stagger">
           <a href="#contact" class="tip-card">
             <div class="tip-card__category">Plumbing Tips</div>
             <h3>How to Detect Water Leaks in Your Home</h3>
@@ -417,7 +455,7 @@
     </section>
 
     <!-- Contact CTA -->
-    <section id="contact" class="cta-band">
+    <section id="contact" class="cta-band reveal">
       <div class="container">
         <h2>Ready to Get Started?</h2>
         <p>Schedule your plumbing service today — we're here when you need us.</p>
